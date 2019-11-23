@@ -1,0 +1,6 @@
+<div class="segment-container" [ngClass]="{ disabled: isDisabled, error: hasError }">
+  <button class="segment-button" *ngFor="let segment of segments" (click)="selectSegment(segment)"
+    [ngClass]="{'segment-button-active': isSelected(segment), error: hasError}" [disabled]="isDisabled">
+    {{segment[displayField] || segment}}
+  </button>
+</div>
